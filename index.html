@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Josh Geden">
+    <title>Conway's Game of Life</title>
+    <!-- scale page to fit entire screen, so it properly fills non-desktop devices -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Load Vue.js -->
+    <script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
+
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page_container">
+        <div class="main" id="app">
+            <h1 class="center">Conway's Game of Life</h1>
+            <table>
+                <tr v-for="i in height" :key="i">
+                    <td v-for="j in width" v-if="myBoard[i-1][j-1] === 0" class="dead" :key="j" @click="boardClick(i-1, j-1)"> 
+                        {{ myBoard[i-1][j-1] }}
+                    </td>
+                    <td v-else class="alive" @click="boardClick(i-1, j-1)">
+                        {{ myBoard[i-1][j-1] }}
+                    </td>
+                </tr>
+            </table>
+            <button @click="start()">Start</button>
+            <button @click="stop()">Stop</button>
+            <button @click="restart()">Restart</button>
+            <p>Update Time (milliseconds): <input type="text" v-model="updateTime" value="updateTime" @keyup.enter="start()"></p>
+        </div>
+    </div>
+</body>
+</html>

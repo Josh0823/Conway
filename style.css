@@ -1,0 +1,41 @@
+.alive {
+    color: yellow;
+    background-color: yellow;
+}
+
+.alive td {
+    color: yellow;
+    background-color: yellow;
+}
+
+.dead {
+    background-color: gray;
+    color: gray;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+td {
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid black;
+}
+
+tr {
+    padding: 0px;
+    background-color: gray;
+    margin: 0px;
+    border: 1px solid black;
+    height: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 10px;
+}
