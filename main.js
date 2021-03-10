@@ -9,7 +9,7 @@ const app = new Vue ({
             myBoard: [],
             height: 20,
             width: 50,
-            updateTime: 1000,
+            updateTime: 500,
             active: '',
         };
     },
@@ -27,7 +27,7 @@ const app = new Vue ({
             // reset variables
             this.stop();
             this.myBoard = [];
-            this.updateTime = 1000;
+            this.updateTime = 500;
             
 
             this.initializeBoard();

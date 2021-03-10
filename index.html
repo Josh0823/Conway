@@ -15,9 +15,9 @@
 </head>
 <body>
     <div class="page_container">
-        <div class="main" id="app">
-            <h1 class="center">Conway's Game of Life</h1>
-            <table>
+        <div class="main center" id="app">
+            <h1>Conway's Game of Life</h1>
+            <table class="center">
                 <tr v-for="i in height" :key="i">
                     <td v-for="j in width" v-if="myBoard[i-1][j-1] === 0" class="dead" :key="j" @click="boardClick(i-1, j-1)"> 
                         {{ myBoard[i-1][j-1] }}
